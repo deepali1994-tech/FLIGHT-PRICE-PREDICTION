@@ -1,18 +1,21 @@
+
 import logging
-import os
 from datetime import datetime
 
-log_file = f"{datetime.now().strftime("%Y-%m-%d") }.log"
-log_path = os.path.join (os.get cwd(), "logs", log_file)
-os.makedirs(os.path.dirname(log_path), exist_ok=True)           
-
-log_file_path= os.path.join(log_path, log_file)  
+log_file = f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}.log"
 
 logging.basicConfig(
+    filename=log_file,
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+
+
+
     
-filename=log_file_path, 
-format="[%(asctime)s] %(lineno)d %(name)s - %(levelname)s - %(message)s",
-level=logging.INFO,
+import logging
 
+logging.basicConfig(level=logging.INFO)
 
-)    
+if __name__ == "__main__":
+    logging.info("Logging is started")

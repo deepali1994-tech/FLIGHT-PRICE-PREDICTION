@@ -5,11 +5,11 @@ def error_message_detail(error,error_details:sys):
 
      file_name = exc_tb.tb_frame.f_code.co_filename
      error = "Error occured in python script name [{0}],line number[{1}] ,error_message[{2}]".format(
-     file_name,exc_tb.tb_lineno,str (error)
+     file_name,exc_tb.tb_lineno,str (error))
 
-    return error_message
+     return error
     
-     )
+     
 
 class Exception(Exception):
     def __init__(self,error, error_details:sys):
