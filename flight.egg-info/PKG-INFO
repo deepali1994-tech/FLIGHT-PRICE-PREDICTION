@@ -4,6 +4,12 @@ Version: 1.0
 Summary: A package for predicting flight prices
 Author: Deepali
 Author-email: deepalikashyap748@gmail.com
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: seaborn
+Requires-Dist: matplotlib
+Requires-Dist: pymongo==4.2.0
 Dynamic: author
 Dynamic: author-email
+Dynamic: requires-dist
 Dynamic: summary
